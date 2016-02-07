@@ -153,6 +153,10 @@ class VersionTestSpec extends Specification{
     "1.99 > 1.9" in {
       Version("1.99") > Version("1.9")
     }
+
+    "1.10 > 1.9" in {
+      Version("1.10") > Version("1.9")
+    }
   }
 
 }
