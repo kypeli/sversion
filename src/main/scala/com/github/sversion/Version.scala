@@ -28,6 +28,7 @@ object Version {
 class Version(version: String) extends LazyLogging {
   val tokens = version
     .replaceAll("[^0-9\\.\\-_]", "")
+    .replaceAll(".0$", "")
     .split("[\\.\\-_]")
     .flatMap(v => v.toOptInt())
     .toList

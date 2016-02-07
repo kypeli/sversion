@@ -129,6 +129,16 @@ class VersionTestSpec extends Specification{
     }
   }
 
+  "Different length" should {
+    "1.1 == 1.1.0" in {
+      Version("1.1") == Version("1.1.0")
+    }
+
+    "1.1.0 > 1.1" in {
+      Version("1.1.0") > Version("1.1") mustEqual false
+    }
+  }
+
   "Invalid" should {
     "'' > 1.0 == false" in {
       Version("") > Version("1.0") mustEqual false
