@@ -149,4 +149,10 @@ class VersionTestSpec extends Specification{
     }
   }
 
+  "Bigger version numbers" should {
+    "1.99 > 1.9" in {
+      Version("1.99") > Version("1.9")
+    }
+  }
+
 }
