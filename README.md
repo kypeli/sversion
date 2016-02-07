@@ -1,14 +1,16 @@
+[![Build Status](https://travis-ci.org/kypeli/sversion.svg?branch=master)](https://travis-ci.org/kypeli/sversion)
+
 # sversion is a Scala library that lets you easily compare version strings
 Inspired by PHP's [version_compare](http://php.net/manual/en/function.version-compare.php) this library lets you to compare two version strings with regular comparison operators in Scala.  
 
   * The version string is expected to be separated by `.`, `_` or `-` characters. 
   * The version string can contain additional characters such as `RC`. 
-  * Different version length is taken into account.
+  * Different version lengths are taken into account.
   * Succeeding `0`s are omitted. 
   * All comparison operators are supported (`>`, `>=`, `<`, `<=` and `==`) 
 
 ## Installation
-Coming soon to Sonatype's Nexus repository. Sorry about that. Until then, you have to clone this repo and include soures to your project.
+Coming soon to Sonatype's Nexus repository. Sorry about that. Until then, you have to clone this repo and include the source code directly to your project.
 
 ## Examples
 Normal version strings.
