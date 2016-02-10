@@ -10,7 +10,15 @@ Inspired by PHP's [version_compare](http://php.net/manual/en/function.version-co
   * All comparison operators are supported (`>`, `>=`, `<`, `<=` and `==`) 
 
 ## Installation
-Coming soon to Sonatype's Nexus repository. Sorry about that. Until then, you have to clone this repo and include the source code directly to your project.
+For **Scala 2.11** with sbt, add the following dependency to your `build.sbt` file:
+```scala
+libraryDependencies ++= Seq(
+// ...
+  "com.github.kypeli" %% "sversion" % "1.0"
+// ...
+)
+```
+
 
 ## Examples
 Normal version strings.
