@@ -31,6 +31,14 @@ class VersionTestSpec extends Specification{
     "1.1.1.1 > 1.1.1.1 == false" in {
       Version("1.1.1.1") > Version("1.1.1.1") mustEqual false
     }
+
+    "0.1.24 > 0.1.24 == false" in {
+      Version("0.1.24") > Version("0.1.24") mustEqual false
+    }
+
+    "1.1.1 > 1 == true" in {
+      Version("1.1.1") > Version("1") mustEqual true
+    }
   }
 
   "Version >=" should {
@@ -57,6 +65,14 @@ class VersionTestSpec extends Specification{
     "1.1.1.1 >= 1.1.1.1 == true" in {
       Version("1.1.1.1") >= Version("1.1.1.1")
     }
+
+    "0.1.24 >= 0.1.24 == true" in {
+      Version("0.1.24") >= Version("0.1.24") mustEqual true
+    }
+
+    "1.1.1 >= 1 == true" in {
+      Version("1.1.1") >= Version("1") mustEqual true
+    }
   }
 
   "Version <" should {
@@ -78,6 +94,14 @@ class VersionTestSpec extends Specification{
 
     "1.1.1.1 < 1.2.3 == true" in {
       Version("1.1.1.1") < Version("1.2.3")
+    }
+
+    "0.1.24 < 0.1.24 == false" in {
+      Version("0.1.24") < Version("0.1.24") mustEqual false
+    }
+
+    "1.1.1 < 1 == false" in {
+      Version("1.1.1") < Version("1") mustEqual false
     }
   }
 
@@ -104,6 +128,14 @@ class VersionTestSpec extends Specification{
 
     "1.1.1.1 <= 1.1.1.1 == true" in {
       Version("1.1.1.1") <= Version("1.1.1.1")
+    }
+
+    "0.1.24 <= 0.1.24 == true" in {
+      Version("0.1.24") <= Version("0.1.24") mustEqual true
+    }
+
+    "1.1.1 <= 1 == false" in {
+      Version("1.1.1") <= Version("1") mustEqual false
     }
   }
 

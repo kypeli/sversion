@@ -33,9 +33,9 @@ class Version(version: String) extends LazyLogging {
     .flatMap(v => v.toOptInt())
     .toList
 
-  def >(that: Version): Boolean = VersionUtils.compare(this.tokens, that.tokens)(resultThisLonger = true)((a: Int, b: Int) => a > b)
+  def >(that: Version): Boolean = VersionUtils.compare(this.tokens, that.tokens)((a: Int, b: Int) => a > b)
   def >=(that: Version): Boolean = this == that || this > that
-  def <(that: Version): Boolean = VersionUtils.compare(this.tokens, that.tokens)(resultThisLonger = false)((a: Int, b: Int) => a < b)
+  def <(that: Version): Boolean = VersionUtils.compare(this.tokens, that.tokens)((a: Int, b: Int) => a < b)
   def <=(that: Version): Boolean = this == that || this < that
   def ==(that: Version): Boolean = this.equals(that)
 
