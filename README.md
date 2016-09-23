@@ -14,7 +14,7 @@ For **Scala 2.11** with sbt, add the following dependency to your `build.sbt` fi
 ```scala
 libraryDependencies ++= Seq(
 // ...
-  "com.github.kypeli" %% "sversion" % "1.0"
+  "com.github.kypeli" %% "sversion" % "1.1"
 // ...
 )
 ```
